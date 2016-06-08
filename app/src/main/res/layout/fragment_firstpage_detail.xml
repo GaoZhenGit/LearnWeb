@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_course_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_left"
+            android:text="android volley 详解"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_middle" />
+
+        <include
+            layout="@layout/separate"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_left"
+            android:text="讲师"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_middle" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/detail_teacher_avater"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/detail_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toEndOf="@+id/detail_teacher_avater"
+                android:layout_toRightOf="@+id/detail_teacher_avater"
+                android:text="纸巾老师"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/detail_teacher_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_teacher_name"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/detail_teacher_avater"
+                android:maxLines="4"
+                android:maxWidth="280dp"
+                android:paddingBottom="15dp"
+                android:text="纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩" />
+
+            <ImageView
+                android:id="@+id/btn_img_question"
+                android:layout_width="@dimen/drawer_img_edge"
+                android:layout_height="@dimen/drawer_img_edge"
+                android:src="@drawable/ic_question"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"/>
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/separate"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_left"
+            android:text="课程简介"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_middle" />
+
+        <TextView
+            android:id="@+id/detail_course_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。暴走大事件，让王尼玛陪你聊天，么么哒。"
+            android:textSize="@dimen/text_size_small" />
+
+    </LinearLayout>
+</ScrollView>

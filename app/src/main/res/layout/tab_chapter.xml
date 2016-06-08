@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tab_chapter_tv"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:text="章节"
+        android:textSize="@dimen/text_size_middle"
+        android:textColor="@color/b"
+        android:gravity="center"/>
+    <View
+        android:id="@+id/tab_chapter_v"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/light_green"
+        android:visibility="invisible"/>
+
+</LinearLayout>

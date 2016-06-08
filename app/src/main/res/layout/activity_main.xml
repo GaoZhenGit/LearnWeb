@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"/>
+
+    <com.gz.learnweb.myview.left_drawerlayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/main_framelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="main" />
+
+        <include
+            layout="@layout/left_menu"
+            android:layout_width="@dimen/drawer_layout_offset"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left" />
+    </com.gz.learnweb.myview.left_drawerlayout>
+</LinearLayout>
+

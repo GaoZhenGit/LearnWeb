@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="----或者你可以使用以下方式登陆----"
+        android:id="@+id/textView"
+        android:layout_above="@+id/weixin"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/weixin"
+        android:layout_width="@dimen/icon_edge"
+        android:layout_height="@dimen/icon_edge"
+        android:src="@drawable/wechat"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="@dimen/icon_edge"
+        android:layout_height="@dimen/icon_edge"
+        android:src="@drawable/qq"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="@dimen/icon_edge"
+        android:layout_height="@dimen/icon_edge"
+        android:src="@drawable/weibo"
+        android:layout_marginRight="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

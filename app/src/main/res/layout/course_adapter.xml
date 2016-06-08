@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/img_video"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_marginTop="14dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/load_failed" />
+
+        <TextView
+            android:id="@+id/video_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:maxWidth="200dp"
+            android:paddingRight="@dimen/margin_right"
+            android:text="疯狂Android讲义视频版"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_middle"
+            android:layout_alignTop="@+id/img_video"
+            android:layout_toRightOf="@+id/img_video"
+            android:layout_toEndOf="@+id/img_video" />
+        <TextView
+            android:id="@+id/video_detail_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:text="讲解人：李刚"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_size_small"
+            android:paddingRight="@dimen/margin_right"
+            android:layout_below="@+id/video_name_tv"
+            android:layout_alignLeft="@+id/video_name_tv"
+            android:layout_alignStart="@+id/video_name_tv" />
+
+        <TextView
+            android:id="@+id/procedure_video_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已学32%"
+            android:textSize="@dimen/text_size_little"
+            android:layout_alignBottom="@+id/img_video"
+            android:layout_toRightOf="@+id/img_video"
+            android:layout_toEndOf="@+id/img_video"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

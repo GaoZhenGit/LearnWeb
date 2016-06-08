@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginTop="@dimen/margin_left"
+        android:src="@drawable/default_avatar" />
+
+    <RelativeLayout
+        android:id="@+id/text_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_left"
+        android:layout_toRightOf="@+id/avatar">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xiaoming"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2015-11-25" />
+
+        <TextView
+            android:id="@+id/tv_discuss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_time"
+            android:text="这个视频看的非常好，一下就懂了，希望更多人看到"
+            android:maxEms="200"
+            android:textSize="@dimen/text_size_middle" />
+    </RelativeLayout>
+    <include
+        android:layout_below="@+id/text_area"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/margin_left"
+        android:layout_height="1px"
+        layout="@layout/separate"/>
+</RelativeLayout>

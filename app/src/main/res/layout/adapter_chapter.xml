@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/charpter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_left"
+            android:textSize="@dimen/text_size_middle"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_right"
+            android:textSize="@dimen/text_size_middle"
+            tools:text="this is lession one" />
+    </LinearLayout>
+    <include
+        layout="@layout/separate"
+        android:layout_below="@+id/charpter"
+        android:layout_height="1px"
+        android:layout_width="match_parent"/>
+</RelativeLayout>

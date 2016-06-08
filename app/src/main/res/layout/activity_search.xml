@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/light_green">
+
+        <RelativeLayout
+            android:id="@+id/btn_search_left"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_selector_titlecolor_light">
+
+            <ImageView
+                android:id="@+id/img_search_left"
+                android:layout_width="@dimen/title_icon_width"
+                android:layout_height="@dimen/title_icon_width"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_left" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_search"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_selector_titlecolor_light">
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_search"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/search"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/text_size_middle" />-->
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="@dimen/title_icon_width"
+                android:layout_height="@dimen/title_icon_width"
+                android:layout_centerInParent="true"
+                android:src="@drawable/search" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_search"
+            android:paddingLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/btn_search_left"
+            android:layout_toLeftOf="@+id/btn_search"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_search"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

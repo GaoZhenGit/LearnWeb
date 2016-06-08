@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/videoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gz.learnweb.activity.CourseActivity">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentTop="true"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar">
+
+        <RelativeLayout
+            android:id="@+id/video_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp">
+
+            <com.gz.learnweb.myview.FullScreenVideoView
+                android:id="@+id/video_view"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <ImageView
+            tools:visibility="visible"
+            android:id="@+id/btn_fullscreen"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="@dimen/margin_right"
+            android:src="@drawable/fullscreen"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/video_control"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--tools:visibility="visible"-->
+        <!--android:layout_below="@+id/relativeLayout"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_start"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="播放" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_pause"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="暂停" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_stop"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="停止" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_landscape"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="横屏" />-->
+    <!--</LinearLayout>-->
+    <com.gz.learnweb.myview.PagerTabWidget
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/video_tabwidget"
+        android:layout_below="@+id/relativeLayout"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/video_viewpager"
+        android:layout_below="@+id/video_tabwidget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/light_green">
+
+    <RelativeLayout
+        android:id="@+id/title_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/btn_selector_titlecolor_light">
+
+        <ImageView
+            android:id="@+id/title_left_img"
+            android:layout_width="@dimen/title_icon_width"
+            android:layout_height="@dimen/title_icon_width"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_left"
+            android:visibility="gone"
+            tool:visibility="visible" />
+
+        <TextView
+            android:id="@+id/title_left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/title_left_img"
+            android:layout_toRightOf="@+id/title_left_img"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:text="左"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:visibility="invisible"
+            tool:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title_mid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="中间文字中间文字中间文字中间文字"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:maxEms="9"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+
+    <RelativeLayout
+        android:id="@+id/title_right_btn"
+        android:layout_width="45dp"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_selector_titlecolor_light">
+
+        <ImageView
+            tool:visibility="visible"
+            android:id="@+id/title_right_img"
+            android:layout_width="@dimen/title_icon_width"
+            android:layout_height="@dimen/title_icon_width"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right"
+            android:src="@drawable/icon_menu"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/title_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_right"
+            android:gravity="center"
+            android:text="右边"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_middle"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_second_right_btn"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/title_right_btn"
+        android:visibility="gone"
+        android:background="@drawable/btn_selector_titlecolor_light"
+        tool:visibility="visible">
+        <ImageView
+            android:id="@+id/title_second_right_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/heart_empty"/>
+    </RelativeLayout>
+
+</RelativeLayout>

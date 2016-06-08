@@ -1,0 +1,33 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gz.learnweb.activity.NoteActivity">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+    <TextView
+        android:id="@+id/note_date"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        tools:text="2015-9-10-22:53:38"/>
+    <EditText
+        android:id="@+id/note_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
+        android:hint="写下你的心得..."
+        android:textColor="@color/light_grey"
+        android:padding="5dp"
+        android:gravity="top"
+        android:background="@drawable/edit_text_area"
+        android:layout_marginTop="@dimen/message_margin"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"/>
+
+</LinearLayout>
