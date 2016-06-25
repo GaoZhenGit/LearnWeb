@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.LogUtil;
 
 import static android.support.v4.view.ViewPager.OnPageChangeListener;

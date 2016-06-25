@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.entire.Course;
 import com.gz.learnweb.entire.Video;

@@ -28,7 +28,7 @@ import com.gz.learnweb.activity.LoginActivity;
 import com.gz.learnweb.listener.LeftHideShow;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.SpUtils;
 import com.gz.learnweb.entire.Course;
 import com.gz.learnweb.myview.CircleIndicators;

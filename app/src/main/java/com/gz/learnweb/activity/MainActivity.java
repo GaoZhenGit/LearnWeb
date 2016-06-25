@@ -18,7 +18,7 @@ import com.gz.learnweb.fragment.CollectFragment;
 import com.gz.learnweb.fragment.MyNoteFragment;
 import com.gz.learnweb.listener.LeftHideShow;
 import com.gz.learnweb.Application.CloudApplication;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.Utils.SpUtils;
 import com.gz.learnweb.entire.User;

@@ -8,7 +8,7 @@ import com.gz.learnweb.Adapter.DiscussAdapter;
 import com.gz.learnweb.entire.Question;
 import com.gz.learnweb.entire.User;
 import com.gz.learnweb.Adapter.QuestionAdapter;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.entire.Discuss;
 
 import java.util.ArrayList;

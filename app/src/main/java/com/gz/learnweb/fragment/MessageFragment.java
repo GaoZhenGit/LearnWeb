@@ -13,7 +13,7 @@ import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.fragment.MessageChildFgm.SysMsgFgm;
 import com.gz.learnweb.listener.LeftHideShow;
 import com.gz.learnweb.myview.TwoPagerTabWidget;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.fragment.MessageChildFgm.RecommendFgm;
 
 import java.util.ArrayList;

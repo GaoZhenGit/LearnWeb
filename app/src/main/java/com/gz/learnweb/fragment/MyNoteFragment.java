@@ -20,7 +20,7 @@ import com.gz.learnweb.Utils.VolleyUtils;
 import com.gz.learnweb.listener.LeftHideShow;
 import com.gz.learnweb.Adapter.NoteAdapter;
 import com.gz.learnweb.Constant;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.activity.NoteActivity;
 import com.gz.learnweb.entire.Note;

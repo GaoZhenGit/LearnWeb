@@ -20,7 +20,7 @@ import com.google.gson.reflect.TypeToken;
 import com.gz.learnweb.Adapter.TabPagerAdapter;
 import com.gz.learnweb.Utils.VolleyUtils;
 import com.gz.learnweb.Constant;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.DensityUtil;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.entire.Course;

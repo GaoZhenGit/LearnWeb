@@ -1,4 +1,4 @@
-package com.ibm.gz.learnweb;
+package com.gz.learnweb;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

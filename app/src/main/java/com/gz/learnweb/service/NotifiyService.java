@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.Vibrator;
 
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.activity.LoginActivity;
 
 public class NotifiyService extends Service {

@@ -5,7 +5,7 @@ import android.widget.EditText;
 import com.androidquery.AQuery;
 import com.gz.learnweb.Utils.VolleyUtils;
 import com.gz.learnweb.Constant;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.entire.Course;
 import com.gz.learnweb.entire.Note;
 import com.lidroid.xutils.DbUtils;

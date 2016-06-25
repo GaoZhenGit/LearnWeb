@@ -16,7 +16,7 @@ import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.Utils.SpUtils;
 import com.gz.learnweb.entire.User;
 import com.gz.learnweb.listener.LeftHideShow;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.entire.Interest;
 
 import java.util.ArrayList;

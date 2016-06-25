@@ -11,7 +11,7 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.gz.learnweb.listener.OnTabSelectedListener;
 import com.nineoldandroids.animation.Animator;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 
 import java.util.List;
 

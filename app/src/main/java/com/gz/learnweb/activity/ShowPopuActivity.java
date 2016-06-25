@@ -14,7 +14,7 @@ import com.androidquery.AQuery;
 import com.androidquery.callback.AjaxStatus;
 import com.androidquery.callback.BitmapAjaxCallback;
 import com.gz.learnweb.Constant;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.entire.PopularizationCourse;
 import com.gz.learnweb.myview.CircleIndicators;
 

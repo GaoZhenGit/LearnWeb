@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.gz.learnweb.entire.Question;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 
 import java.util.List;
 

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TabWidget;
 
 
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.listener.OnTabSelectedListener;
 
 import java.util.ArrayList;

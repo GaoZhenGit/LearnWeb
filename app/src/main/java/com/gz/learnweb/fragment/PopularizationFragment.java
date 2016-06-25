@@ -14,7 +14,7 @@ import com.gz.learnweb.Adapter.PopularizationAdapter;
 import com.gz.learnweb.Constant;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.listener.LeftHideShow;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.activity.ShowPopuActivity;
 import com.gz.learnweb.entire.PopularizationCourse;
 

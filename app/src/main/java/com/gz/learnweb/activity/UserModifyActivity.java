@@ -10,7 +10,7 @@ import com.google.gson.GsonBuilder;
 import com.gz.learnweb.Constant;
 import com.gz.learnweb.Utils.SpUtils;
 import com.gz.learnweb.entire.User;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 
 /**
  * to modify the username or detail on server

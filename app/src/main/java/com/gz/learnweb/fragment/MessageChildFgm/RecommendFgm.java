@@ -19,7 +19,7 @@ import com.gz.learnweb.Utils.VolleyUtils;
 import com.gz.learnweb.activity.CourseActivity;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.entire.Course;
 
 import org.json.JSONArray;

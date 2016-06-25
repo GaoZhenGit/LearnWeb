@@ -7,7 +7,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 
 /**
  * Created by host on 2015/10/2.

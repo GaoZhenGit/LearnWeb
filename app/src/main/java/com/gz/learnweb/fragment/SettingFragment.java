@@ -21,7 +21,7 @@ import com.gz.learnweb.activity.LoginActivity;
 import com.gz.learnweb.activity.MainActivity;
 import com.gz.learnweb.entire.User;
 import com.gz.learnweb.listener.LeftHideShow;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 import com.gz.learnweb.activity.UserModifyActivity;
 
 import org.json.JSONException;

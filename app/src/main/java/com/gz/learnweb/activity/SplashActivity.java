@@ -2,7 +2,7 @@ package com.gz.learnweb.activity;
 
 import android.content.Intent;
 
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

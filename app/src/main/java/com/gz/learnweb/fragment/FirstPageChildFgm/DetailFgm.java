@@ -11,7 +11,7 @@ import com.androidquery.AQuery;
 import com.gz.learnweb.activity.CourseActivity;
 import com.gz.learnweb.activity.QuestionActivity;
 import com.gz.learnweb.entire.Course;
-import com.ibm.gz.learnweb.R;
+import com.gz.learnweb.R;
 
 /**
  * show the teacher and course detail,and the entery of questionacitvity
