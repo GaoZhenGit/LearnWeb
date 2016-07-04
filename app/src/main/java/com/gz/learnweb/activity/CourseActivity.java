@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -50,6 +51,7 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
     private PagerTabWidget mTabWidget;
     private ViewPager mViewPager;
     private TabPagerAdapter mPagerAdapter;
+    private ProgressBar progressBar;
 
     private List<Fragment> fragments;
 
@@ -87,6 +89,7 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
         mediaController = new FullScreenMediaController(this);
         mTabWidget = (PagerTabWidget) findViewById(R.id.video_tabwidget);
         mViewPager = (ViewPager) findViewById(R.id.video_viewpager);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         //设置tab相关组件
         mTabWidget.setDividerInvisible();
@@ -151,6 +154,20 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
             public void onStart() {
                 //设置历史记录，在播放视频后
                 saveHistroy();
+            }
+        });
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                progressBar.setVisibility(View.INVISIBLE);
+                videoView.start();
+            }
+        });
+        videoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mp, int what, int extra) {
+                progressBar.setVisibility(View.INVISIBLE);
+                return false;
             }
         });
     }
