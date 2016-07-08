@@ -12,8 +12,12 @@ import android.widget.TextView;
 
 import com.androidquery.AQuery;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.gz.learnweb.Constant;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.Utils.SpUtils;
+import com.gz.learnweb.Utils.VolleyUtils;
+import com.gz.learnweb.entire.Course;
 import com.gz.learnweb.entire.User;
 import com.gz.learnweb.listener.LeftHideShow;
 import com.gz.learnweb.R;
@@ -77,24 +81,25 @@ public class InterestFragment extends Fragment implements LeftHideShow {
     }
 
     private void initListView() {
-        requestNet();
         showUserTag();
         new AQuery(contextView).id(R.id.btn_tag_comfirm).clicked(this, "aq_self_tag");
     }
 
     //请求访问网络（获取标签）
     private void requestNet() {
-        List<Interest> interests = new ArrayList<>();
-        Interest interest = new Interest();
-        interest.setId(1255);
-        interest.setName("java");
-        Interest interest2 = new Interest();
-        interest2.setId(12255);
-        interest2.setName("css");
+        VolleyUtils.post(Constant.URL.Interest + "select", null, new VolleyUtils.NetworkListener() {
+            @Override
+            public void onSuccess(String response) {
+                Gson gson = new Gson();
+                List<Interest> list = gson.fromJson(response, new TypeToken<List<Interest>>() {
+                }.getType());
+                showTags(list);
+            }
 
-        interests.add(interest);
-        interests.add(interest2);
-        showTags(interests);
+            @Override
+            public void onFail(String error) {
+            }
+        });
     }
 
     //带有刷新性质的显示下方tag
@@ -190,6 +195,11 @@ public class InterestFragment extends Fragment implements LeftHideShow {
         aq.id(R.id.text_interest).getTextView().setTextColor(getResources().getColor(R.color.grey));
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        requestNet();
+    }
 
     private class TagOnClickListener implements View.OnClickListener, View.OnLongClickListener {
 

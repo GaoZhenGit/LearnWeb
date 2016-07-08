@@ -28,6 +28,7 @@ public interface Constant {
         public static final String AddCollection = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=addCollection";
         public static final String DellectCollection = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=deleteCollection";
         public static final String Note = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=note&opration=";
+        public static final String Interest = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=interest&opration=";
     }
 
     class CODE {
