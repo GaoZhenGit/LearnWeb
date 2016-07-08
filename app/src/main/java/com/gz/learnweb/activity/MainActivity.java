@@ -48,7 +48,7 @@ public class MainActivity extends BasePageActivity {
     private MessageFragment messageFragment;
     private MyNoteFragment myNoteFragment;
     private SettingFragment settingFragment;
-    private long exitTime=0;
+    private long exitTime = 0;
 
 
     @Override
@@ -58,18 +58,18 @@ public class MainActivity extends BasePageActivity {
 
     @Override
     protected void initData() {
-        fragmentManager=getSupportFragmentManager();
-        sp=new SpUtils(this);
-        gson =new Gson();
+        fragmentManager = getSupportFragmentManager();
+        sp = new SpUtils(this);
+        gson = new Gson();
     }
 
     @Override
     protected void initLayoutView() {
         setContentView(R.layout.activity_main);
-        aq=new AQuery(this);
+        aq = new AQuery(this);
         //设置左拉菜单用户显示
         refreshUserView();
-        mDrawerLayout=(DrawerLayout)findViewById(R.id.drawer_layout);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
     }
 
     @Override
@@ -128,17 +128,16 @@ public class MainActivity extends BasePageActivity {
         });
 
 
-
-        aq.id(R.id.title_right_btn).clicked(this,"aq_search");
+        aq.id(R.id.title_right_btn).clicked(this, "aq_search");
     }
 
-    public void refreshUserView(){
-        user=gson.fromJson(sp.getValue("user",""),User.class);
+    public void refreshUserView() {
+        user = gson.fromJson(sp.getValue("user", ""), User.class);
         aq.id(R.id.username_tv).text(user.getUsername());
     }
 
-    public void serv(){
-        Intent intent=new Intent();
+    public void serv() {
+        Intent intent = new Intent();
         intent.setAction("notifi");
         intent.setPackage("com.ibm.gz.learn_cloud");
         LogUtil.i("-------------start service", "start");
@@ -153,6 +152,7 @@ public class MainActivity extends BasePageActivity {
 
     /**
      * 切换fragment，可以不必重新加载
+     *
      * @param to 转换到的Fragment
      */
     public void switchContent(Fragment to) {
@@ -163,7 +163,7 @@ public class MainActivity extends BasePageActivity {
                 transaction.hide(currentFragment).add(R.id.main_framelayout, to).commit(); // 隐藏当前的fragment，add下一个到Activity中
                 LeftHideShow current = (LeftHideShow) currentFragment;
                 current.leftOff();
-                currentFragment=to;
+                currentFragment = to;
             } else {
                 transaction.hide(currentFragment).show(to).commit(); // 隐藏当前的fragment，显示下一个
                 //左侧菜单
@@ -178,59 +178,65 @@ public class MainActivity extends BasePageActivity {
     }
 
     //首页
-    public void aq_firstpage(){
-        if (firstPageFragment==null) {
+    public void aq_firstpage() {
+        if (firstPageFragment == null) {
             firstPageFragment = new FirstPageFragment();
         }
         switchContent(firstPageFragment);
     }
 
     //历史课程
-    public void aq_history(){
-        if(historyFragment==null){
-            historyFragment=new HistoryFragment();
+    public void aq_history() {
+        if (historyFragment == null) {
+            historyFragment = new HistoryFragment();
         }
         switchContent(historyFragment);
     }
+
     //收藏课程
-    public void aq_collect_course(){
-        if(collectFragment==null){
-            collectFragment=new CollectFragment();
+    public void aq_collect_course() {
+        if (collectFragment == null) {
+            collectFragment = new CollectFragment();
         }
         switchContent(collectFragment);
     }
+
     //科普
-    public void aq_popularization(){
-        if(popularizationFragment==null){
-            popularizationFragment=new PopularizationFragment();
+    public void aq_popularization() {
+        if (popularizationFragment == null) {
+            popularizationFragment = new PopularizationFragment();
         }
         switchContent(popularizationFragment);
     }
+
     //兴趣
-    public void aq_interest(){
-        if(interestFragment==null){
-            interestFragment=new InterestFragment();
+    public void aq_interest() {
+        if (interestFragment == null) {
+            interestFragment = new InterestFragment();
         }
         switchContent(interestFragment);
     }
+
     //我的消息
-    public void aq_message(){
-        if(messageFragment==null){
-            messageFragment=new MessageFragment();
+    public void aq_message() {
+        if (messageFragment == null) {
+            messageFragment = new MessageFragment();
         }
         switchContent(messageFragment);
     }
+
     //笔记
-    public void aq_my_note(){
-        if(myNoteFragment==null){
-            myNoteFragment=new MyNoteFragment();
+    public void aq_my_note() {
+        if (myNoteFragment == null) {
+            myNoteFragment = new MyNoteFragment();
         }
         switchContent(myNoteFragment);
     }
+
     //个人设置
-    public void aq_setting(){
-        if(settingFragment==null){
-            settingFragment=new SettingFragment();
+    public void aq_setting() {
+        if (settingFragment == null) {
+            settingFragment = new SettingFragment();
         }
         switchContent(settingFragment);
     }
@@ -244,11 +250,11 @@ public class MainActivity extends BasePageActivity {
                 exitTime = System.currentTimeMillis();
             } else {
                 finish();
-                ((CloudApplication)getApplication()).exit();
+                ((CloudApplication) getApplication()).exit();
             }
             return true;
         }
-        if(keyCode==KeyEvent.KEYCODE_MENU){
+        if (keyCode == KeyEvent.KEYCODE_MENU) {
             aq.id(R.id.title_left_btn).click();
         }
         return super.onKeyDown(keyCode, event);

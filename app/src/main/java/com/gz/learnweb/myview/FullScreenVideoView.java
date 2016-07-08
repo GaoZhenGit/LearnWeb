@@ -38,10 +38,11 @@ public class FullScreenVideoView extends VideoView {
         }
         setMeasuredDimension(width, height);
     }
+
     @Override
-    public void start(){
+    public void start() {
         super.start();
-        if(onVideoStartListener!=null){
+        if (onVideoStartListener != null) {
             onVideoStartListener.onStart();
         }
     }
@@ -66,7 +67,7 @@ public class FullScreenVideoView extends VideoView {
         this.onVideoStartListener = onVideoStartListener;
     }
 
-    public interface onVideoStartListener{
+    public interface onVideoStartListener {
         void onStart();
     }
 }

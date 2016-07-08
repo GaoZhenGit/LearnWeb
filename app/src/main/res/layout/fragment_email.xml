@@ -88,13 +88,6 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/text_size_large" />
         </LinearLayout>
-
-        <include
-            layout="@layout/third_app_login"
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="100dp" />
     </RelativeLayout>
 
 </FrameLayout>

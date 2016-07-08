@@ -10,31 +10,35 @@ import android.widget.MediaController;
  */
 public class FullScreenMediaController extends MediaController {
     private View bringView;
+
     public FullScreenMediaController(Context context) {
         super(context);
     }
+
     public FullScreenMediaController(Context context, boolean useFastForward) {
         super(context, useFastForward);
     }
+
     public FullScreenMediaController(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
-    public void setBringView(View view){
-        bringView=view;
+
+    public void setBringView(View view) {
+        bringView = view;
     }
 
     @Override
-    public void show(int overtime){
+    public void show(int overtime) {
         super.show(overtime);
-        if(bringView!=null){
+        if (bringView != null) {
             bringView.setVisibility(View.VISIBLE);
         }
     }
 
     @Override
-    public void hide(){
+    public void hide() {
         super.hide();
-        if(bringView!=null){
+        if (bringView != null) {
             bringView.setVisibility(View.INVISIBLE);
         }
     }

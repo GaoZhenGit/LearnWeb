@@ -32,10 +32,8 @@
 
                 <EditText
                     android:id="@+id/login_phone_et"
-                    android:numeric="integer"
                     android:layout_width="fill_parent"
                     android:layout_height="@dimen/button_height"
-                    android:maxLength="11"
                     android:background="@color/defalut"
                     android:hint="邮箱/手机号" />
             </LinearLayout>
@@ -100,13 +98,6 @@
                     android:textColor="@color/lightblue" />
             </RelativeLayout>
         </LinearLayout>
-
-        <include
-            layout="@layout/third_app_login"
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="100dp" />
     </RelativeLayout>
 
 </LinearLayout>

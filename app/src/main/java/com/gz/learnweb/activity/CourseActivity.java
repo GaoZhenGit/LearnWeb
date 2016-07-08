@@ -210,25 +210,25 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
     //添加收藏
     public void aq_note() {
         Bundle bundle = new Bundle();
-        bundle.putSerializable(Constant.DataKey.COURSE,course);
+        bundle.putSerializable(Constant.DataKey.COURSE, course);
         Intent intent = new Intent(this, NoteActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }
 
     //添加收藏
-    public void aq_collection(){
+    public void aq_collection() {
         aq.id(R.id.title_second_right_btn).clickable(false);
-        LogUtil.i("---------","collection");
-        Map<String,String> param =new HashMap<>();
-        param.put("course_id",course.getCourse_id()+"");
+        LogUtil.i("---------", "collection");
+        Map<String, String> param = new HashMap<>();
+        param.put("course_id", course.getCourse_id() + "");
         VolleyUtils.post(Constant.URL.AddCollection, param, new VolleyUtils.NetworkListener() {
             @Override
             public void onSuccess(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String state = jsonObject.optString("state");
-                    if (state.equals("success")){
+                    if (state.equals("success")) {
                         Toast.makeText(CourseActivity.this, "收藏成功", Toast.LENGTH_SHORT).show();
                         aq.id(R.id.title_second_right_btn).clicked(CourseActivity.this, "aq_unCollection");
                         aq.id(R.id.title_second_right_img).image(R.drawable.heart_full);
@@ -245,19 +245,20 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
             }
         });
     }
+
     //取消收藏
-    public void aq_unCollection(){
+    public void aq_unCollection() {
         aq.id(R.id.title_second_right_btn).clickable(false);
-        LogUtil.i("---------","unCollection");
-        Map<String,String> param =new HashMap<>();
-        param.put("course_id",course.getCourse_id()+"");
+        LogUtil.i("---------", "unCollection");
+        Map<String, String> param = new HashMap<>();
+        param.put("course_id", course.getCourse_id() + "");
         VolleyUtils.post(Constant.URL.DellectCollection, param, new VolleyUtils.NetworkListener() {
             @Override
             public void onSuccess(String response) {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String state = jsonObject.optString("state");
-                    if (state.equals("success")){
+                    if (state.equals("success")) {
                         Toast.makeText(CourseActivity.this, "取消收藏成功", Toast.LENGTH_SHORT).show();
                         aq.id(R.id.title_second_right_btn).clicked(CourseActivity.this, "aq_collection");
                         aq.id(R.id.title_second_right_img).image(R.drawable.heart_empty);
@@ -373,21 +374,21 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
         });
     }
 
-    private void checkCollection(){
+    private void checkCollection() {
         VolleyUtils.post(Constant.URL.GetCollection, null, new VolleyUtils.NetworkListener() {
             @Override
             public void onSuccess(String response) {
                 try {
                     JSONArray jsonArray = new JSONArray(response);
-                    List<Course> courses =gson.fromJson(jsonArray.toString(),new TypeToken<List<Course>>() {
+                    List<Course> courses = gson.fromJson(jsonArray.toString(), new TypeToken<List<Course>>() {
                     }.getType());
-                    if(courses.contains(CourseActivity.this.course)){
+                    if (courses.contains(CourseActivity.this.course)) {
                         aq.id(R.id.title_second_right_btn).visible();//收藏按钮可见
-                        aq.id(R.id.title_second_right_btn).clicked(CourseActivity.this,"aq_unCollection");
+                        aq.id(R.id.title_second_right_btn).clicked(CourseActivity.this, "aq_unCollection");
                         aq.id(R.id.title_second_right_img).image(R.drawable.heart_full);
-                    }else {
+                    } else {
                         aq.id(R.id.title_second_right_btn).visible();//收藏按钮可见
-                        aq.id(R.id.title_second_right_btn).clicked(CourseActivity.this,"aq_collection");
+                        aq.id(R.id.title_second_right_btn).clicked(CourseActivity.this, "aq_collection");
                         aq.id(R.id.title_second_right_img).image(R.drawable.heart_empty);
                     }
                 } catch (JSONException e) {
