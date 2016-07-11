@@ -68,13 +68,13 @@
                 android:paddingBottom="15dp"
                 android:text="纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩纸巾老师好好玩" />
 
-            <ImageView
-                android:id="@+id/btn_img_question"
-                android:layout_width="@dimen/drawer_img_edge"
-                android:layout_height="@dimen/drawer_img_edge"
-                android:src="@drawable/ic_question"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="40dp"/>
+            <!--<ImageView-->
+                <!--android:id="@+id/btn_img_question"-->
+                <!--android:layout_width="@dimen/drawer_img_edge"-->
+                <!--android:layout_height="@dimen/drawer_img_edge"-->
+                <!--android:src="@drawable/ic_question"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="40dp"/>-->
 
         </RelativeLayout>
 

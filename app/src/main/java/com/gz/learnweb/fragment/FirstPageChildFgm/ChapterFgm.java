@@ -5,12 +5,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.LogUtil;
+import com.gz.learnweb.activity.CourseActivity;
 import com.gz.learnweb.entire.Course;
 import com.gz.learnweb.entire.Video;
 
@@ -28,9 +30,10 @@ public class ChapterFgm extends Fragment {
     private ListView listView;
     private ChapterAdapter chapterAdapter;
 
-    public void setVideoList(List<Video> list){
+    public void setVideoList(List<Video> list) {
         this.videoList = list;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,11 +45,12 @@ public class ChapterFgm extends Fragment {
         convertview = inflater.inflate(R.layout.fragment_charpter, container, false);
         initData();
         initView();
+        setListener();
         return convertview;
     }
 
     private void initData() {
-        if (videoList == null){
+        if (videoList == null) {
             videoList = new ArrayList<>();
         }
         listView = (ListView) convertview.findViewById(R.id.charpter_list);
@@ -57,6 +61,18 @@ public class ChapterFgm extends Fragment {
 
     private void initView() {
 
+    }
+
+    private void setListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CourseActivity courseActivity = (CourseActivity) ChapterFgm.this.getActivity();
+                if (courseActivity != null) {
+                    courseActivity.reSetVideoUri(position);
+                }
+            }
+        });
     }
 
     public class ChapterAdapter extends BaseAdapter {
@@ -89,11 +105,11 @@ public class ChapterFgm extends Fragment {
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
-            if (viewHolder == null){
+            if (viewHolder == null) {
                 LogUtil.i("viewHolder");
             }
-            viewHolder.order.setText(videoList.get(position).getOrder()+"");
-            viewHolder.name.setText(videoList.get(position).getName()+"");
+            viewHolder.order.setText(videoList.get(position).getOrder() + "");
+            viewHolder.name.setText(videoList.get(position).getName() + "");
             return convertView;
         }
 

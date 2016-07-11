@@ -25,6 +25,7 @@ import com.gz.learnweb.R;
 import com.gz.learnweb.Utils.DensityUtil;
 import com.gz.learnweb.Utils.LogUtil;
 import com.gz.learnweb.entire.Course;
+import com.gz.learnweb.entire.Video;
 import com.gz.learnweb.fragment.FirstPageChildFgm.ChapterFgm;
 import com.gz.learnweb.fragment.FirstPageChildFgm.DetailFgm;
 import com.gz.learnweb.fragment.FirstPageChildFgm.NoteFgm;
@@ -175,6 +176,16 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
     public void reSetVideoUri(String uri) {
         videoView.stopPlayback();
         videoView.setVideoURI(Uri.parse(uri));
+        videoView.start();
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    public void reSetVideoUri(int index) {
+        if (index < 0 || index >= course.getCourse_videos().size()) {
+            return;
+        }
+        Video video = course.getCourse_videos().get(index);
+        reSetVideoUri(video.getUri());
     }
 
     @Override

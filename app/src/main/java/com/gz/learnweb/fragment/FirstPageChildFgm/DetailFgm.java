@@ -45,7 +45,7 @@ public class DetailFgm extends Fragment {
             aq.id(R.id.detail_teacher_avater).image(course.getTeacher().getAvater());
             aq.id(R.id.detail_teacher_detail).text(course.getTeacher().getDetail());
         }
-        aq.id(R.id.btn_img_question).clicked(this, "question");
+//        aq.id(R.id.btn_img_question).clicked(this, "question");
     }
 
     public void question() {
