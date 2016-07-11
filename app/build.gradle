@@ -18,6 +18,7 @@ android {
         }
     }
 }
+android.sourceSets.main.java.exclude 'com/gz/learnweb/fragment/PopularizationFragment.java'
 
 dependencies {
     compile files('libs/android-query-full.0.26.7.jar')

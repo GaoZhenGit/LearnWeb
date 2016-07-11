@@ -45,8 +45,6 @@
             android:layout_below="@+id/avatar"
             android:layout_toRightOf="@+id/avatar"
             android:layout_toEndOf="@+id/avatar" />
-
-
     </RelativeLayout>
 
 
@@ -130,31 +128,31 @@
             android:layout_marginLeft="60dp"/>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/btn_popularization"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/drawer_btn_height"
-        android:clickable="true">
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/btn_popularization"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="@dimen/drawer_btn_height"-->
+        <!--android:clickable="true">-->
 
-        <ImageView
-            android:id="@+id/img_popularization"
-            android:layout_width="@dimen/drawer_img_edge"
-            android:layout_height="@dimen/drawer_img_edge"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/drawer_margin_left"
-            android:src="@drawable/popularization_gray"/>
+        <!--<ImageView-->
+            <!--android:id="@+id/img_popularization"-->
+            <!--android:layout_width="@dimen/drawer_img_edge"-->
+            <!--android:layout_height="@dimen/drawer_img_edge"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="@dimen/drawer_margin_left"-->
+            <!--android:src="@drawable/popularization_gray"/>-->
 
-        <TextView
-            android:id="@+id/text_popularization"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="科普天地圆"
-            android:textSize="@dimen/text_size_middle"
-            android:textColor="@color/grey"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="60dp"/>
-    </RelativeLayout>
+        <!--<TextView-->
+            <!--android:id="@+id/text_popularization"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="科普天地圆"-->
+            <!--android:textSize="@dimen/text_size_middle"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_marginLeft="60dp"/>-->
+    <!--</RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/btn_interest"

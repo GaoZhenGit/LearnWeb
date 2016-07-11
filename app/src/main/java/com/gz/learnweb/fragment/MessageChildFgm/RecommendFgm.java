@@ -15,8 +15,10 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.gz.learnweb.Adapter.CourseAdapter;
 import com.gz.learnweb.Constant;
+import com.gz.learnweb.Utils.SpUtils;
 import com.gz.learnweb.Utils.VolleyUtils;
 import com.gz.learnweb.activity.CourseActivity;
+import com.gz.learnweb.entire.User;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.gz.learnweb.R;
@@ -97,8 +99,11 @@ public class RecommendFgm extends Fragment {
     //请求网络数据（刷新）
     private void requestNet(){
         Map<String, String> param = new HashMap<>();
-        param.put("type", "firstpagecourse");
-        VolleyUtils.post(Constant.URL.RequestCourse,param, new VolleyUtils.NetworkListener() {
+//        param.put("type", "firstpagecourse");
+        SpUtils spUtils = new SpUtils(getActivity());
+        User user = gson.fromJson(spUtils.getValue(Constant.DataKey.USER,""),User.class);
+        param.put("searchkey",user.getInterests().get(0).getName());
+        VolleyUtils.post(Constant.URL.SearchCourse,param, new VolleyUtils.NetworkListener() {
             @Override
             public void onSuccess(String response) {
                 try {

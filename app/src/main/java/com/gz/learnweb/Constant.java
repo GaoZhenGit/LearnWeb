@@ -11,24 +11,24 @@ public interface Constant {
     }
 
     class URL {
-        public static final String Register = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=register";
-//        public static final String Register = "http://2.learncloud.sinaapp.com/registerCheck.php";
-        public static final String Login = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=login";
-        //        public static final String Login="http://2.learncloud.sinaapp.com/login.php";
-//        public static final String RequestCourse="http://2.learncloud.sinaapp.com/postRequest.php";
+        public static final String Register = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=register";
+//        public static final String Register = "http://2.LearnWeb.sinaapp.com/registerCheck.php";
+        public static final String Login = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=login";
+        //        public static final String Login="http://2.LearnWeb.sinaapp.com/login.php";
+//        public static final String RequestCourse="http://2.LearnWeb.sinaapp.com/postRequest.php";
 //        public static final String RequestCourse="http://1.marketonhand.sinaapp.com/requestTest.php";
-        public static final String RequestCourse = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=firstpagecourse";
-        public static final String RequestMore = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=requestmore";
-        public static final String SearchCourse = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=search";
-        public static final String ModifyUser = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=user_modify";
-        public static final String AddHistory = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=addHistory";
-        public static final String GetHistory = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=getHistory";
-        public static final String DeleteHistory = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=deleteHistory";
-        public static final String GetCollection = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=getCollection";
-        public static final String AddCollection = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=addCollection";
-        public static final String DellectCollection = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=deleteCollection";
-        public static final String Note = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=note&opration=";
-        public static final String Interest = "http://"+ServerIp.IP+"/LearnCloud/index.php?m=Home&c=Index&a=interest&opration=";
+        public static final String RequestCourse = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=firstpagecourse";
+        public static final String RequestMore = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=requestmore";
+        public static final String SearchCourse = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=search";
+        public static final String ModifyUser = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=user_modify";
+        public static final String AddHistory = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=addHistory";
+        public static final String GetHistory = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=getHistory";
+        public static final String DeleteHistory = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=deleteHistory";
+        public static final String GetCollection = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=getCollection";
+        public static final String AddCollection = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=addCollection";
+        public static final String DellectCollection = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=deleteCollection";
+        public static final String Note = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=note&opration=";
+        public static final String Interest = "http://"+ServerIp.IP+"/LearnWeb/index.php?m=Home&c=Index&a=interest&opration=";
     }
 
     class CODE {

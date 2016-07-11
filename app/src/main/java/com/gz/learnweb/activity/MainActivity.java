@@ -26,7 +26,7 @@ import com.gz.learnweb.fragment.FirstPageFragment;
 import com.gz.learnweb.fragment.HistoryFragment;
 import com.gz.learnweb.fragment.InterestFragment;
 import com.gz.learnweb.fragment.MessageFragment;
-import com.gz.learnweb.fragment.PopularizationFragment;
+//import com.gz.learnweb.fragment.PopularizationFragment;
 import com.gz.learnweb.fragment.SettingFragment;
 
 public class MainActivity extends BasePageActivity {
@@ -43,7 +43,7 @@ public class MainActivity extends BasePageActivity {
     private FirstPageFragment firstPageFragment;
     private HistoryFragment historyFragment;
     private CollectFragment collectFragment;
-    private PopularizationFragment popularizationFragment;
+//    private PopularizationFragment popularizationFragment;
     private InterestFragment interestFragment;
     private MessageFragment messageFragment;
     private MyNoteFragment myNoteFragment;
@@ -110,7 +110,7 @@ public class MainActivity extends BasePageActivity {
         aq.id(R.id.btn_firstpage).clicked(this, "aq_firstpage");
         aq.id(R.id.btn_history).clicked(this, "aq_history");
         aq.id(R.id.btn_collect_course).clicked(this, "aq_collect_course");
-        aq.id(R.id.btn_popularization).clicked(this, "aq_popularization");
+//        aq.id(R.id.btn_popularization).clicked(this, "aq_popularization");
         aq.id(R.id.btn_interest).clicked(this, "aq_interest");
         aq.id(R.id.btn_my_note).clicked(this, "aq_my_note");
         aq.id(R.id.btn_message).clicked(this, "aq_message");
@@ -203,10 +203,10 @@ public class MainActivity extends BasePageActivity {
 
     //科普
     public void aq_popularization() {
-        if (popularizationFragment == null) {
-            popularizationFragment = new PopularizationFragment();
-        }
-        switchContent(popularizationFragment);
+//        if (popularizationFragment == null) {
+//            popularizationFragment = new PopularizationFragment();
+//        }
+//        switchContent(popularizationFragment);
     }
 
     //兴趣
