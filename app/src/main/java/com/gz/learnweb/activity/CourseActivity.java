@@ -58,6 +58,10 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
 
 
     private Gson gson;
+    //记录当前播放位置
+    private int position = 0;
+    //记录当前播放视频
+    private int currentVideoIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,19 +177,32 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
         });
     }
 
-    public void reSetVideoUri(String uri) {
+    private void reSetVideoUri(String uri) {
         videoView.stopPlayback();
         videoView.setVideoURI(Uri.parse(uri));
-        videoView.start();
+//        videoView.start();
         progressBar.setVisibility(View.VISIBLE);
     }
 
-    public void reSetVideoUri(int index) {
+    public void reSetVideoUri(int index) {//设置播放第几个视频
         if (index < 0 || index >= course.getCourse_videos().size()) {
             return;
         }
         Video video = course.getCourse_videos().get(index);
+        currentVideoIndex = index;
         reSetVideoUri(video.getUri());
+    }
+
+    public void reSetVideoUri(int index, final int duration) {//设置播放第几个视频并滑动位置
+        reSetVideoUri(index);
+        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                progressBar.setVisibility(View.INVISIBLE);
+                videoView.start();
+                videoView.seekTo(duration);
+            }
+        });
     }
 
     @Override
@@ -366,6 +383,18 @@ public class CourseActivity extends BasePageActivity implements MediaPlayer.OnEr
 
     public Course getCourse() {
         return course;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        position = videoView.getCurrentPosition();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        reSetVideoUri(currentVideoIndex, position);
     }
 
     //播放后添加历史记录

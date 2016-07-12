@@ -107,6 +107,12 @@ public class MainActivity extends BasePageActivity {
             }
         });
         //每个左侧按设置监听器
+        aq.id(R.id.btn_user).clicked(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         aq.id(R.id.btn_firstpage).clicked(this, "aq_firstpage");
         aq.id(R.id.btn_history).clicked(this, "aq_history");
         aq.id(R.id.btn_collect_course).clicked(this, "aq_collect_course");
